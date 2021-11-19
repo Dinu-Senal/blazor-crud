@@ -21,3 +21,32 @@
         </NotFound>
     </Router>
 </CascadingAuthenticationState>
+
+@code {
+    public static Dictionary<Guid, BlazorCRUDWeb.Shared.Todo> Todos = new Dictionary<Guid, BlazorCRUDWeb.Shared.Todo>();
+    protected override void OnInitialized()
+    {
+        var todo1 = new BlazorCRUDWeb.Shared.Todo()
+        {
+            Id = Guid.NewGuid(),
+            Name = "Grosery shopping",
+            Description = "Buy some vegetables and milk",
+        };
+        var todo2 = new BlazorCRUDWeb.Shared.Todo()
+        {
+            Id = Guid.NewGuid(),
+            Name = "Pay Bills",
+            Description = "Pay for this month's rent and electricity",
+        };
+        var todo3 = new BlazorCRUDWeb.Shared.Todo()
+        {
+            Id = Guid.NewGuid(),
+            Name = "Clean up the room",
+            Description = "Vacuum the floor and wipe the table",
+        };
+
+        Todos.Add(todo1.Id, todo1);
+        Todos.Add(todo2.Id, todo2);
+        Todos.Add(todo3.Id, todo3);
+    }
+}
