@@ -23,22 +23,22 @@
 </CascadingAuthenticationState>
 
 @code {
-    public static Dictionary<Guid, BlazorCRUDWeb.Shared.Todo> Todos = new Dictionary<Guid, BlazorCRUDWeb.Shared.Todo>();
+    public static Dictionary<Guid, Todo> Todos = new Dictionary<Guid, Todo>();
     protected override void OnInitialized()
     {
-        var todo1 = new BlazorCRUDWeb.Shared.Todo()
+        var todo1 = new Todo()
         {
             Id = Guid.NewGuid(),
             Name = "Grosery shopping",
             Description = "Buy some vegetables and milk",
         };
-        var todo2 = new BlazorCRUDWeb.Shared.Todo()
+        var todo2 = new Todo()
         {
             Id = Guid.NewGuid(),
             Name = "Pay Bills",
             Description = "Pay for this month's rent and electricity",
         };
-        var todo3 = new BlazorCRUDWeb.Shared.Todo()
+        var todo3 = new Todo()
         {
             Id = Guid.NewGuid(),
             Name = "Clean up the room",

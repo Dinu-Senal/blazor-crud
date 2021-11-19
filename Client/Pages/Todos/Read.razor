@@ -10,7 +10,7 @@
 @code {
     [Parameter]
     public Guid Id { get; set; }
-    public BlazorCRUDWeb.Shared.Todo todo { get; set; }
+    public Todo todo { get; set; }
     protected override void OnInitialized()
     {
         if (App.Todos.ContainsKey(Id))
